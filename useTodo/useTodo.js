@@ -1,7 +1,7 @@
 //* libraries
 import { useReducer, useEffect } from "react";
 //* helpers
-import { todoReducer } from "../08-useReducer/todoReducer";
+import { todoReducer } from "./todoReducer";
 
 const initialState = [
     // {
