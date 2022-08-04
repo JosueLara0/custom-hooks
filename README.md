@@ -6,3 +6,4 @@ Create multiple custom hooks template for further use.
 2. useFetch
 3. useForm
 4. useTodo
+5. useStore
