@@ -1,13 +1,18 @@
 //* libraries
 import { useState, useEffect } from "react";
 
-//--------------------------------------------------------------------
+
 export const useFetch = (url) => {
+
     const [state, setState] = useState({
         data: null,
         isLoading: true,
         hasError: null
     });
+
+    useEffect(() => {
+        getFetch();
+    }, [url]);
 
     const getFetch = async () => {
 
@@ -25,12 +30,6 @@ export const useFetch = (url) => {
             hasError: null
         });
     };
-
-
-    useEffect(() => {
-        getFetch();
-    }, [url]);
-
 
     return {
         data: state.data,

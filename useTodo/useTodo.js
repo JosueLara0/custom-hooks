@@ -16,7 +16,6 @@ const init = () => {
 };
 
 
-//--------------------------------------------------------------------
 export const useTodo = () => {
     const [todos, dispatch] = useReducer(todoReducer, initialState, init);
 
@@ -42,6 +41,11 @@ export const useTodo = () => {
     const todosPending = todos.filter((todo) => !todo.done).length;
 
     return {
-        todos, handleDeleteTodo, handleToggleTodo, handleNewTodo, todosCount: todos.length, todosPending
+        todos,
+        todosCount: todos.length,
+        todosPending,
+        handleDeleteTodo,
+        handleToggleTodo,
+        handleNewTodo,
     };
 };
